@@ -94,7 +94,6 @@ class MovieSessionDetailSerializer(MovieSessionSerializer):
 
 
 class TicketSerializer(serializers.ModelSerializer):
-    # required MovieSessionListSerializer in order to pass tests according to README.md requirements
     movie_session = MovieSessionListSerializer(many=False, read_only=True)
 
     class Meta:
